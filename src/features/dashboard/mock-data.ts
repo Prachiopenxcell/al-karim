@@ -1,0 +1,52 @@
+import { DashboardData } from './types';
+
+export const dashboardMock: DashboardData = {
+  stats: [
+    { title: 'Total Students', value: '2,847', change: '12.5% vs. last month', direction: 'up', icon: 'users' },
+    { title: 'Active Courses', value: '156', change: '8.2% vs. last semester', direction: 'up', icon: 'book' },
+    { title: 'Fee Collection', value: '₹45.2L', change: '15.8% this month', direction: 'up', icon: 'credit' },
+    { title: 'Hostel Occupancy', value: '89.4%', change: '2.1% vs last month', direction: 'down', icon: 'bed' },
+  ],
+  enrollment: [
+    { month: 'jan', mbbs: 420, pg: 360 },
+    { month: 'feb', mbbs: 450, pg: 380 },
+    { month: 'mar', mbbs: 520, pg: 405 },
+    { month: 'apr', mbbs: 600, pg: 440 },
+    { month: 'may', mbbs: 680, pg: 470 },
+    { month: 'jun', mbbs: 640, pg: 460 },
+    { month: 'jul', mbbs: 720, pg: 505 },
+    { month: 'aug', mbbs: 780, pg: 540 },
+    { month: 'sep', mbbs: 740, pg: 520 },
+    { month: 'oct', mbbs: 800, pg: 560 },
+    { month: 'nov', mbbs: 860, pg: 590 },
+    { month: 'dec', mbbs: 820, pg: 570 },
+  ],
+  collections: [
+    { month: 'jan', amount: 42 },
+    { month: 'feb', amount: 46 },
+    { month: 'mar', amount: 54 },
+    { month: 'apr', amount: 61 },
+    { month: 'may', amount: 69 },
+    { month: 'jun', amount: 64 },
+    { month: 'jul', amount: 73 },
+    { month: 'aug', amount: 78 },
+    { month: 'sep', amount: 70 },
+    { month: 'oct', amount: 82 },
+    { month: 'nov', amount: 88 },
+    { month: 'dec', amount: 80 },
+  ],
+  activity: [
+    { name: 'Priya Sharma', tag: 'pending', desc: 'Application Submitted', time: '2 hours ago', amount: '₹50,000' },
+    { name: 'Rahul Kumar', tag: 'success', desc: 'Fee Payment', time: '4 hours ago', amount: '₹75,000' },
+    { name: 'Anita Patel', tag: 'success', desc: 'Document Verification', time: '6 hours ago', amount: '₹25,000' },
+    { name: 'Vikram Singh', tag: 'pending', desc: 'Hostel Fee', time: '8 hours ago', amount: '₹30,000' },
+    { name: 'Meera Joshi', tag: 'processing', desc: 'Fee Refund', time: '1 day ago', amount: '₹15,000' },
+  ],
+  departments: [
+    { name: 'Computer Science', value: '485/500', percent: 97, tag: 'excellent' },
+    { name: 'Business Administration', value: '342/400', percent: 86, tag: 'good' },
+    { name: 'Engineering', value: '678/700', percent: 96, tag: 'excellent' },
+    { name: 'Arts & Humanities', value: '234/300', percent: 78, tag: 'average' },
+    { name: 'Medical Sciences', value: '156/180', percent: 87, tag: 'excellent' },
+  ],
+};
