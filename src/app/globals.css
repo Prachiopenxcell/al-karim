@@ -72,6 +72,14 @@
   background: linear-gradient(135deg, #2D6A4F 0%, #40916C 100%);
 }
 
+/* Higher-contrast variant for brand areas (improves white icon + green wordmark visibility) */
+.al-karim-gradient-contrast {
+  /* two-layer background: subtle radial highlight + directional green gradient */
+  background-image:
+    radial-gradient(120% 80% at 35% 50%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.0) 60%),
+    linear-gradient(135deg, #1B4332 0%, #2D6A4F 45%, #3B7D61 100%);
+}
+
 .stat-card-green {
   background: linear-gradient(135deg, #2DD4BF 0%, #14B8A6 100%);
 }

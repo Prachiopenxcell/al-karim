@@ -63,6 +63,11 @@ module.exports = {
     // Prefer early returns and short functions (enforced by linting hints)
     complexity: ["warn", { max: 10 }],
     "max-lines-per-function": ["warn", { max: 80, skipComments: true, skipBlankLines: true }],
+    // Keep component files small and focused
+    "max-lines": [
+      "warn",
+      { max: 250, skipComments: true, skipBlankLines: true }
+    ],
   },
   overrides: [
     {

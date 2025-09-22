@@ -93,18 +93,18 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed left-0 top-0 z-40 h-screen bg-white border-r border-gray-200 transition-all duration-300 flex flex-col overflow-x-hidden',
+          'fixed left-0 top-0 z-40 h-screen bg-white border-r border-gray-200 transition-all duration-300 flex flex-col ',
           'md:translate-x-0',
           isMobileOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
           isCollapsed ? 'w-20' : 'w-64'
         )}
       >
         {/* Header */}
-        <div className="flex h-16 items-center justify-between px-4 border-b border-gray-200 al-karim-gradient flex-shrink-0">
+        <div className={cn('relative flex h-16 items-center justify-center bg-gradient-to-br from-green-50 to-teal-50 flex-shrink-0', isCollapsed ? 'px-1' : 'px-4')}>
           <div className="flex items-center gap-3">
             {isCollapsed ? (
-              <div className="bg-white p-2.5 rounded-xl shadow-sm ring-1 ring-black/5">
-                <Image src="/images/icon.svg" alt="Al karim" width={36} height={36} />
+              <div className=" shadow-sm ">
+                <Image src="/images/icon.svg" alt="Al karim" width={50} height={50}  />
               </div>
             ) : (
               <Image
@@ -112,7 +112,7 @@ export default function Sidebar() {
                 alt="Al karim"
                 width={148}
                 height={36}
-                className="block max-h-9 w-auto"
+                className="block max-h-9 w-auto drop-shadow"
                 priority
               />
             )}
@@ -120,11 +120,19 @@ export default function Sidebar() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-white hover:bg-white/20 hidden md:flex"
+            className={cn(
+              'absolute z-50 md:flex items-center justify-center rounded-full bg-white text-gray-700',
+              ' shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.18)]',
+              'hover:bg-white/95 active:scale-95 transition-all',
+              // Float outside the sidebar edge
+              '-right-3 top-1/2 -translate-y-1/2',
+              // Button sizing
+              'w-6 h-6'
+            )}
             onClick={() => setIsCollapsed(!isCollapsed)}
             aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
-            <ChevronRight className={cn('h-4 w-4 transition-transform', isCollapsed ? 'rotate-0' : 'rotate-180')} />
+            <ChevronRight className={cn('transition-transform', isCollapsed ? 'rotate-0 h-4 w-4' : 'rotate-180 h-4 w-4')} />
           </Button>
         </div>
 

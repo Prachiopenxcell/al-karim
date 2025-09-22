@@ -13,7 +13,7 @@ interface ChartProps {
 
 export default function Chart({ title, subtitle, className, children }: ChartProps) {
   return (
-    <Card className={className ? className : 'shadow-md border-0'}>
+    <Card className={className ? className : 'shadow-md border-0 pb-4'}>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <div>
           <CardTitle className="text-base">{title}</CardTitle>
